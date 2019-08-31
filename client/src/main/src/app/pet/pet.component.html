@@ -1,0 +1,17 @@
+<div class="row tab-row">
+  <div class="span6">
+    <ul class="nav nav-tabs">
+      <li class = "active"><a  routerLink="/home">Pet Project</a></li>
+      <li><a routerLink="/weather">Weather Project</a></li>
+    </ul>
+  </div>
+</div>
+<div class="loading-container" *ngIf="!petListByGender">
+  <div class="spinner spinnerTwo"><span></span></div>
+</div>
+<div class="panel panel-primary" *ngFor="let info of petListByGender">
+    <div class="panel-heading">{{ info.gender}}</div>
+    <div class="panel-body" *ngFor="let pet of info.petName">
+        <span class="glyphicon glyphicon-menu-right"></span> {{ pet }}
+    </div>
+</div>

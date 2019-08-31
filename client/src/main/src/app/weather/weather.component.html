@@ -1,0 +1,38 @@
+<div class="row tab-row">
+  <div class="span6">
+    <ul class="nav nav-tabs">
+      <li><a routerLink="/home">Pet Project</a></li>
+      <li class = "active"><a routerLink="/weather">Weather Project</a></li>
+    </ul>
+  </div>
+</div>
+
+<form role="form">
+  <div class="form-group">
+    <label for="name">Please Select The City</label>
+    <select class="form-control" (change)="getWeatherInfo($event.target.value)">
+      <option *ngFor="let city of cities" [value]="city">{{city}}</option>
+    </select>
+  </div>
+</form>
+<div class="loading-container" *ngIf="!wr">
+  <div class="spinner spinnerTwo"><span></span></div>
+</div>
+
+<div class="panel panel-primary" *ngIf="wr">
+  <div class="panel-heading">
+    <h3 class="panel-title">Weather Info</h3>
+  </div>
+  <div class="panel-body">
+    <button id="fat-btn" class="btn btn-info" (click)="getWeatherInfo(wr.city)" type="button"> Refresh</button>
+  </div>
+  <table class="table">
+    <tbody>
+      <tr><td class="weather-table-font-title">City</td><td>{{wr.city}}</td></tr>
+      <tr><td class="weather-table-font-title">Update Time</td><td>{{wr.updateTime}}</td></tr>
+      <tr><td class="weather-table-font-title">Weather</td><td>{{wr.weather}}</td></tr>
+      <tr><td class="weather-table-font-title">Temperature</td><td>{{wr.temperature}} ℃</td></tr>
+      <tr><td class="weather-table-font-title">Wind</td><td>{{wr.wind}} km/h</td></tr>
+    </tbody>
+  </table>
+</div>

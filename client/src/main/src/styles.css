@@ -1,0 +1,92 @@
+/* You can add global styles to this file, and also import other style files */
+.tab-row {
+  margin: 0 0 5px 0;
+}
+.sub-btn {
+  margin-top:10px;
+}
+
+.page-not-found-container {
+  text-align: center;
+  background-color: #bbdded;
+}
+
+.weather-table-font-title {
+  font-weight: bold;
+}
+
+
+.spinner {
+  border-radius: 50%;
+  margin: 20px;
+  display: inline-block;
+  position: relative;
+  height: 60px;
+  width: 60px;
+  background-color: #e0e0eb;
+}
+
+.spinnerTwo:before {
+  position: absolute;
+  top: 30px;
+  left: 27.5px;
+  content: "";
+  height: 35px;
+  width: 5px;
+  background-color: #535657;
+  transform-origin: 50% 0%;
+  border-radius: 8px;
+  animation: clockmin 2s linear infinite;
+}
+.spinnerTwo:after {
+  position: absolute;
+  content: "";
+  height: 35px;
+  width: 2px;
+  top: 30px;
+  left: 29px;
+  transform-origin: 50% 0%;
+  background-color: #D1462F;
+  border-radius: 2px;
+  animation: clocksec 0.5s linear infinite;
+}
+.spinnerTwo span {
+  position: absolute;
+  top: 10px;
+  left: 27.5px;
+  height: 20px;
+  width: 5px;
+  border-radius: 2px;
+  background: #535657;
+  transform-origin: 50% 100%;
+  animation: clockhour 10s linear infinite;
+}
+
+@keyframes clockhour {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes clockmin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes clocksec {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-container {
+  text-align: center;
+}
