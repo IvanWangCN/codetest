@@ -10,6 +10,9 @@ node {
             }
    }
    stage('Deploy') {
-      sh 'nohup $JAVA_HOME/bin/java -jar $WORKSPACE/server/target/codetest-server-0.0.1-SNAPSHOT.jar >start.log 2>&1 &'
+      sh '''
+          BUILD_ID=DONTKILLME
+          nohup $JAVA_HOME/bin/java -jar $WORKSPACE/server/target/codetest-server-0.0.1-SNAPSHOT.jar >start.log 2>&1 &
+      '''
    }
 }
