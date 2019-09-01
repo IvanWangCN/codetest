@@ -13,7 +13,7 @@ node {
       withMaven(
            maven: 'MAVEN_3.5.4',
            mavenLocalRepo: '.repository') {
-               sh "mvn test -Dtest=CodetestApplicationTests,WeatherPetControllerTest,WeatherPetServiceImplTests"
+               sh "mvn test -DfailIfNoTests=false -Dtest=CodetestApplicationTests,WeatherPetControllerTest,WeatherPetServiceImplTests"
            }
    }
    stage('Deploy') {
