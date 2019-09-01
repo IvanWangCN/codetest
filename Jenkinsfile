@@ -11,6 +11,7 @@ node {
    }
    stage('Deploy') {
       sh '''
+          curl -X POST http://35.236.113.128:8080/shutdown
           JENKINS_NODE_COOKIE=DONTKILLME
           $JAVA_HOME/bin/java -jar $WORKSPACE/server/target/codetest-server-0.0.1-SNAPSHOT.jar >start.log 2>&1 &
       '''
