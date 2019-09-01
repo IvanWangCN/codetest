@@ -17,6 +17,6 @@ node {
            }
    }
    stage('Deploy') {
-      sh 'java -jar $WORKSPACE/server/target/codetest-server-0.0.1-SNAPSHOT.jar'
+      sh '$JAVA_HOME/bin/java -jar $WORKSPACE/server/target/codetest-server-0.0.1-SNAPSHOT.jar'
    }
 }
