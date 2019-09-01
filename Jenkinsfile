@@ -12,7 +12,7 @@ node {
    stage('Deploy') {
       sh '''
           #!/bin/bash
-          PORT=$(netstat -ntulp | grep 8080)
+          PORT=$(sudo netstat -ntulp | grep 8080)
           if [[ -n $PORT ]]; then
                   echo "The server is open, ready to close"
                   RESULT="000"
