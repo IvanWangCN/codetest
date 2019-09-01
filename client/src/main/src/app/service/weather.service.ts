@@ -10,7 +10,7 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  private weatherUrl: string = location.host + '/api/weather';
+  private weatherUrl: string = "http://" + location.host + '/api/weather';
 
 
   getWeather(city: string): Observable<WeatherResp> {
