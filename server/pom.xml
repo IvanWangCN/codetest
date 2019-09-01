@@ -8,8 +8,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>server</artifactId>
-	<name>server</name>
+	<artifactId>codetest-server</artifactId>
+	<name>codetest-server</name>
 	<description>Codetest project-Spring Boot Server</description>
 
 	<dependencies>
@@ -25,7 +25,7 @@
 		</dependency>
 		<dependency>
             <groupId>com.ivan.learning</groupId>
-            <artifactId>client</artifactId>
+            <artifactId>codetest-client</artifactId>
             <version>${project.version}</version>
             <scope>runtime</scope>
         </dependency>
