@@ -4,14 +4,14 @@ node {
    }
    stage('Build') {
         withMaven(
-            maven: 'M3',
+            maven: 'MAVEN_3.5.4',
             mavenLocalRepo: '.repository') {
                 sh "mvn clean install -Dmaven.test.skip=true"
             }
    }
    stage('Test') {
       withMaven(
-           maven: 'M3',
+           maven: 'MAVEN_3.5.4',
            mavenLocalRepo: '.repository') {
                sh "mvn test -Dtest=CodetestApplicationTests,WeatherPetControllerTest,WeatherPetServiceImplTests"
            }
