@@ -17,7 +17,6 @@ node {
            }
    }
    stage('Deploy') {
-      sh 'sudo cp -f $WORKSPACE/server/target/codetest-server-0.0.1-SNAPSHOT.jar /codetest'
-      sh 'sudo java -jar /codetest/codetest-server-0.0.1-SNAPSHOT.jar'
+      sh 'java -jar $WORKSPACE/server/target/codetest-server-0.0.1-SNAPSHOT.jar'
    }
 }
