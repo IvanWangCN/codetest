@@ -8,8 +8,8 @@
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
 
-	<artifactId>client</artifactId>
-	<name>client</name>
+	<artifactId>codetest-client</artifactId>
+	<name>codetest-client</name>
 	<description>Codetest project-Angular Client</description>
 
 	<build>
@@ -26,14 +26,12 @@
                 </configuration>
 
                 <executions>
-				<!-- 
                     <execution>
                         <id>install node and npm</id>
                         <goals>
                             <goal>install-node-and-npm</goal>
                         </goals>
                     </execution>
-                -->
                     <execution>
                         <id>npm install</id>
                         <goals>
